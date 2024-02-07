@@ -1,0 +1,32 @@
+name: BlogTheme
+slug: blogtheme
+type: theme
+version: 0.0.1
+description: "BlogTheme is a light bootsrap based theme"
+icon: empire
+author:
+  name: Heimfisch
+  email: devs@getgrav.org
+  url: https://heinisch-design.de
+homepage: https://github.com/cheinisch/BlogTheme-Grav
+demo: https://demo.getgrav.org/blog-skeleton
+keywords: antimatter, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/cheinisch/BlogTheme-Grav/issues
+license: MIT
+
+dependencies:
+    - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
