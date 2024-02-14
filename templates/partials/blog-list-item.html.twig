@@ -1,4 +1,6 @@
+    
                         <div class="col-lg-12 pb-3">
+                        {% set image = page.media.images|first %}
                             {% if image %}
                             <div class="card-image">
                                 <img class="card-img-top" src="{{ image.cropZoom(800,400).html|raw }} />
