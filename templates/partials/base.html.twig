@@ -1,71 +1,124 @@
-{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
+{% set grid_size = theme_var('grid-size') %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% use 'blocks/base.html.twig' %}
 <!DOCTYPE html>
-<html lang="{{ (grav.language.getActive ?: theme_config.default_lang)|e }}">
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}" data-bs-theme="auto">
 <head>
-{% block head %}
-    <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e }} | {% endif %}{{ site.title|e }}</title>
+    {% block head deferred %}
+	<!-- Metainformationen -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="John Doe">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% include 'partials/metadata.html.twig' %}
-
-    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png')|e }}" />
-    <link rel="canonical" href="{{ page.url(true, true)|e }}" />
-{% endblock head %}
-
-{% block stylesheets %}
-    {% do assets.addCss('http://yui.yahooapis.com/pure/0.6.0/pure-min.css', 100) %}
-    {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', 99) %}
-    {% do assets.addCss('theme://css/custom.css', 98) %}
-{% endblock %}
-
+	<meta name="description" content="Free Web tutorials">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<!-- Titel-->
+	<title>{% if page.title %}{{ page.title|e('html') }} // {% endif %}{{ site.title|e('html') }}</title>
+    {% endblock head %}
+	<!-- Stylesheets -->
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css/bootstrap.min.css') %}
+        {% do assets.addCss('theme://css/bootstrap-icons.min.css') %}
+        {% do assets.addCss('theme://css/style.css') %}
+    {% endblock %}
+	<!-- Javascripte -->
 {% block javascripts %}
-    {% do assets.addJs('jquery', 100) %}
+    {% do assets.addJs('jquery', 101) %}
+    {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
 {% endblock %}
 
 {% block assets deferred %}
     {{ assets.css()|raw }}
     {{ assets.js()|raw }}
 {% endblock %}
-
 </head>
-<body id="top" class="{{ page.header.body_classes|e }}">
-
-{% block header %}
-    <div class="header">
-        <div class="wrapper padding">
-            <a class="logo left" href="{{ (base_url == '' ? '/' : base_url)|e }}">
-                <i class="fa fa-rebel"></i>
-                {{ config.site.title|e }}
-            </a>
-            {% block header_navigation %}
-            <nav class="main-nav">
-                {% include 'partials/navigation.html.twig' %}
+<body>
+    <!-- Bootstrap Static Header -->
+    <div class="jumbotron bg-cover">
+        <!--<div style="background: url(https://bootstrapious.com/i/snippets/sn-static-header/background.jpg)" class="jumbotron bg-cover text-white">-->
+        <div class="container">
+            <nav class="navbar navbar-expand-md mb-4">
+                <!--<nav class="navbar navbar-expand-md navbar-dark mb-4">-->
+                <div class="container-md col-lg-10 nav-size">
+                <!--<a class="navbar-brand" href="#">{{ site.title|e('html') }}</a>-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0 navbar-nav col-lg-12 justify-content-lg-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index_mit_sidebar.html">List mit Sidebar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page.html">Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="article.html">Article</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-            {% endblock %}
+        </div>
+        <div class="container py-5 headimg text-center">
+            <h1 class="display-4 font-weight-bold">{{ site.title|e('html') }}</h1>
+            <p class="font-italic mb-0">Ein wunderschöner Blog mit einer tollen Subline</p>
+            <p class="font-italic">Snippe by
+                <a href="https://bootstrapious.com" class="text-white">
+                    <u>Bootstrapious</u>
+                </a>
+            </p>
         </div>
     </div>
-{% endblock %}
-
-{% block body %}
-    <section id="body">
-        <div class="wrapper padding">
-        {% block content %}{% endblock %}
+    <div class="container-md">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 pt-2 pb-1">
+            
         </div>
-    </section>
-{% endblock %}
+        <div class="col-lg-10">
+            <div class="row">
+        <section id="start">
+        {% block body %}
+            <section id="body-wrapper" class="section">
+                <section class="container {{ grid_size }}">
+                    {% block messages %}
+                        {% include 'partials/messages.html.twig' ignore missing %}
+                    {% endblock %}
+                    {{ block('content_surround') }}
+                    hallo welt
+                </section>
+            </section>
+        {% endblock %}
+        </section>
 
-{% block footer %}
-    <div class="footer text-center">
-        <div class="wrapper padding">
-            <p><a href="https://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
+    </div>
+
+    {% block footer %}
+        {% include 'partials/footer.html.twig' %}
+    {% endblock %}
+
+    {% block mobile %}
+    <div class="mobile-container">
+        <div class="overlay" id="overlay">
+
+            <nav class="overlay-menu">
+                {% include 'partials/navigation.html.twig' with {tree: true} %}
+            </nav>
         </div>
     </div>
-{% endblock %}
+    {% endblock %}
 
 {% block bottom %}
     {{ assets.js('bottom')|raw }}
 {% endblock %}
 
 </body>
+</html>
