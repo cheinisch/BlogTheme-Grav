@@ -30,7 +30,7 @@ form:
           0: Disabled
         validate:
           type: bool
-    sidebar:
+    show_sidebar:
       type: toggle
       label: Sidebar
       help: When enabled, the sidebar is active

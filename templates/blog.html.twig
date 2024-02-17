@@ -33,18 +33,16 @@
         {% embed 'partials/layout.html.twig' with {blog: page} %}
             {% block item %}
 
-                <div class="bricklayer">
                 {% for child in collection %}
                     {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
                 {% endfor %}
-                </div>
 
                 {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
                     <div id="listing-footer">
                         {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
                     </div>
                 {% endif %}
-
+                
             {% endblock %}
 
             {% block sidebar %}
