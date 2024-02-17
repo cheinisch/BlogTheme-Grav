@@ -45,15 +45,25 @@ form:
       type: toggle
       label: Dark Style
       help: Activate dark mode style
-      highlight: 0
-      default: 0
+      highlight: auto
+      default: auto
       options:
-        1: Enabeld
-        0: Disabled
-        2: Auto
+        light: Light
+        dark: Dark
+        auto: Auto
       validate:
-        type: bool
-    subtitle:
+        type: text
+    subtitle.enabled:
+        type: toggle
+        label: Subtitle under Site Title
+        highlight: 0
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+    subtitle.text:
       type: text
       label: Sub Title
       help: A Textline for the Blogpage

@@ -1,9 +1,10 @@
 {% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
 {% set grid_size = theme_var('grid-size') %}
-{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% set subtitle = theme_var('subtitle.text') %}
+{% set dark_mode = theme_var('darkmode') %}
 {% use 'blocks/base.html.twig' %}
 <!DOCTYPE html>
-<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}" data-bs-theme="auto">
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}" data-bs-theme="{{ dark_mode }}">
 <head>
     {% block head deferred %}
 	<!-- Metainformationen -->
@@ -70,12 +71,9 @@
         </div>
         <div class="container py-5 headimg text-center">
             <h1 class="display-4 font-weight-bold">{{ site.title|e('html') }}</h1>
-            <p class="font-italic mb-0">Ein wunderschöner Blog mit einer tollen Subline</p>
-            <p class="font-italic">Snippe by
-                <a href="https://bootstrapious.com" class="text-white">
-                    <u>Bootstrapious</u>
-                </a>
-            </p>
+            {% if theme_var('subtitle.enabled') %}
+                <p class="font-italic mb-0">T{{ subtitle }}</p>
+            {% endif %}            
         </div>
     </div>
     <div class="container-md">
