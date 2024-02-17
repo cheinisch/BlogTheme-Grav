@@ -1,6 +1,6 @@
 {% import 'macros/macros.html.twig' as macros %}
 
-<ul {{ tree ? 'class="tree"' : '' }}>
+<ul {{ tree ? 'class="tree"' : '' }} class="navbar-nav me-auto mb-2 mb-md-0 navbar-nav col-lg-12 justify-content-lg-end">
     {{ macros.nav_loop(pages) }}
 </ul>
 
