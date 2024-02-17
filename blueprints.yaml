@@ -30,3 +30,26 @@ form:
           0: Disabled
         validate:
           type: bool
+    sidebar:
+      type: toggle
+      label: Sidebar
+      help: When enabled, the sidebar is active
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    darkmode:
+      type: toggle
+      label: Dark Style
+      help: Activate dark mode style
+      highlight: 0
+      default: 0
+      options:
+        1: Enabeld
+        0: Disabled
+        2: Auto
+      validate:
+        type: bool
