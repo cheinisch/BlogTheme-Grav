@@ -7,7 +7,7 @@
                             </div>
                             {% endif %}
                             {% include 'partials/blog/title.html.twig' with {title_level: 'h2'} %}
-                            <div class="small text-muted">{% include 'partials/blog/date.html.twig' %} // {{ page.header.author|e }}</div>
+                            <div class="small text-muted">{% include 'partials/blog/date.html.twig' %} {% if page.header.author %}// {{ page.header.author|e }}{% endif %}</div>
                             {% if page.summary != page.content %}
                                 {{ page.summary|raw }}
                             {% else %}
