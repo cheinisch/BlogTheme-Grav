@@ -58,4 +58,4 @@ form:
       label: Sub Title
       help: A Textline for the Blogpage
       size: medium
-      default: '/blog'
+      default: ''
