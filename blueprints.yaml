@@ -53,3 +53,9 @@ form:
         2: Auto
       validate:
         type: bool
+    subtitle:
+      type: text
+      label: Sub Title
+      help: A Textline for the Blogpage
+      size: medium
+      default: '/blog'
