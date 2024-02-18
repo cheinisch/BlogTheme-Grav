@@ -80,30 +80,30 @@ form:
       collapsible: true    # Whether one can expand the fieldset or not
       fields:
         socialicons.enable:
-        type: toggle
-        label: Subtitle under Site Title
-        highlight: 0
-        default: 0
-        options:
-          1: Enabled
-          0: Disabled
-        validate:
-          type: bool
-        socialicons.gitub:
+          type: toggle
+          label: Subtitle under Site Title
+          highlight: 0
+          default: 0
+          options:
+            1: Enabled
+            0: Disabled
+          validate:
+            type: bool
+        socialicons.github:
           type: text
-          label: textarea
+          label: Github
         socialicons.instagram:
           type: text
-          label: textarea
+          label: Instagram
         socialicons.facebook:
           type: text
-          label: textarea
+          label: Facebook
         socialicons.youtube:
           type: text
-          label: textarea
+          label: Youtube
         socialicons.twitter:
           type: text
-          label: textarea
+          label: Twitter
         socialicons.tiktok:
           type: text
-          label: textarea
+          label: Tiktok
