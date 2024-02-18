@@ -65,39 +65,21 @@
     <div class="container-md">
     <div class="row justify-content-center">
         <div class="col-lg-10 pt-2 pb-1">
-            
-        </div>
-        <div class="col-lg-10">
             <div class="row">
         <section id="start">
         {% block body %}
-            <section id="body-wrapper" class="section">
-                <section class="container {{ grid_size }}">
                     {% block messages %}
                         {% include 'partials/messages.html.twig' ignore missing %}
                     {% endblock %}
                     {{ block('content_surround') }}
                     hallo welt
-                </section>
-            </section>
         {% endblock %}
         </section>
-
+            </div>
     </div>
 
     {% block footer %}
         {% include 'partials/footer.html.twig' %}
-    {% endblock %}
-
-    {% block mobile %}
-    <div class="mobile-container">
-        <div class="overlay" id="overlay">
-
-            <nav class="overlay-menu">
-                {% include 'partials/navigation.html.twig' with {tree: true} %}
-            </nav>
-        </div>
-    </div>
     {% endblock %}
 
 {% block bottom %}
