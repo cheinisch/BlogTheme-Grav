@@ -81,7 +81,7 @@ form:
       fields:
         socialicons.enable:
           type: toggle
-          label: Subtitle under Site Title
+          label: Enable Social Icons in Footer Area
           highlight: 0
           default: 0
           options:
