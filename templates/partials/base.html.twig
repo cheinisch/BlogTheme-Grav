@@ -2,6 +2,7 @@
 {% set grid_size = theme_var('grid-size') %}
 {% set subtitle = theme_var('subtitle.text') %}
 {% set dark_mode = theme_var('darkmode') %}
+{% set image = page.media.images|first %}
 {% use 'blocks/base.html.twig' %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}" data-bs-theme="{{ dark_mode }}">
@@ -37,8 +38,12 @@
 </head>
 <body>
     <!-- Bootstrap Static Header -->
-    <div class="jumbotron bg-cover">
-        <!--<div style="background: url(https://bootstrapious.com/i/snippets/sn-static-header/background.jpg)" class="jumbotron bg-cover text-white">-->
+    
+        {% if image %}
+        <div style="background: url({{ image.url|e }})" class="jumbotron bg-cover text-white">
+        {% else %}
+        <div class="jumbotron bg-cover">
+        {% endif %}
         <div class="container">
             <nav class="navbar navbar-expand-md mb-4">
                 <!--<nav class="navbar navbar-expand-md navbar-dark mb-4">-->
