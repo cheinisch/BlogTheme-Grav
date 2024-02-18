@@ -2,6 +2,8 @@ en:
   THEME_BLOGTHEME:
     ADMIN:
       GRID_SIZE: Grid size
+      NAV_BAR: Navbar
+      NO_NAV_BAR: Big Header Text
     BLOG:
       ITEM:
         CONTINUE_READING: Continue reading...

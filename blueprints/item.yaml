@@ -1,4 +1,4 @@
-title: Blog
+title: Item
 '@extends':
     type: default
     context: blueprints://pages

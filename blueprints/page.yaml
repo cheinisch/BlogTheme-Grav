@@ -1,4 +1,4 @@
-title: Blog
+title: Page Content
 '@extends':
     type: default
     context: blueprints://pages
