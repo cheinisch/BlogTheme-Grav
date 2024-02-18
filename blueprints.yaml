@@ -107,3 +107,10 @@ form:
         socialicons.tiktok:
           type: text
           label: Tiktok
+    footernav:
+      type: array
+      label: Footer NAV Items
+      help: Add a nav to the Footer
+      placeholder_key: Pagetitle
+      placeholder_value: Pageurl
+      required: false
