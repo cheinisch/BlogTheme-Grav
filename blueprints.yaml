@@ -69,3 +69,34 @@ form:
       help: A Textline for the Blogpage
       size: medium
       default: ''
+    header.fieldset:
+      type: fieldset
+      title: Social Media Icons
+      help: Help text
+      info: Info text
+      text: The Icons in the Footer are only visible, if the function is enabled
+      icon: comments       # Fork Awesome icons system (see : forkaweso.me).
+      collapsed: true      # Initial state of fieldset (see collapsible option)
+      collapsible: true    # Whether one can expand the fieldset or not
+      fields:
+        socialicons.enable:
+          type: text
+          label: text
+        socialicons.gitub:
+          type: text
+          label: textarea
+        socialicons.instagram:
+          type: text
+          label: textarea
+        socialicons.facebook:
+          type: text
+          label: textarea
+        socialicons.youtube:
+          type: text
+          label: textarea
+        socialicons.twitter:
+          type: text
+          label: textarea
+        socialicons.tiktok:
+          type: text
+          label: textarea
