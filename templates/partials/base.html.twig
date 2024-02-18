@@ -52,7 +52,7 @@
             <nav class="navbar navbar-expand-md mb-4">
             {% endif %}
                 <div class="container-md col-lg-10 nav-size">
-                <!--<a class="navbar-brand" href="#">{{ site.title|e('html') }}</a>-->
+                {% if page.header.show_big_title %}{% else %}<a class="navbar-brand" href="#">{{ site.title|e('html') }}</a>{% endif %}
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -65,10 +65,14 @@
             </nav>
         </div>
         <div class="container py-5 headimg text-center">
-            <h1 class="display-4 font-weight-bold">{{ site.title|e('html') }}</h1>
-            {% if theme_var('subtitle.enabled') %}
-                <p class="font-italic mb-0">{{ subtitle }}</p>
-            {% endif %}            
+            {% if page.header.show_big_title %}
+                <h1 class="display-4 font-weight-bold">{{ site.title|e('html') }}</h1>
+                {% if theme_var('subtitle.enabled') %}
+                    <p class="font-italic mb-0">{{ subtitle }}</p>
+                {% endif %} 
+            {% else %}     
+                <h1 class="display-4 font-weight-bold">{{ page.title|e('html') }}</h1>
+            {% endif %}      
         </div>
     </div>
     <div class="container-md">

@@ -3,6 +3,11 @@
 
 <div class="row">
     <div id="item" class="column {{ item_col }} extra-spacing">
+        {% if page.header.show_big_title %}
+            {% if page.header.show_headline %}
+                <h2>{{ page.title|e('html') }}</h2>
+            {% endif %}
+        {% endif %}
         {% block item %}{% endblock %}
     </div>
     {% if show_sidebar %}

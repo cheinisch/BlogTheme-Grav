@@ -22,7 +22,18 @@ form:
               highlight: 0
               default: 0
               options:
-                1: THEME_BLOGTHEME.ADMIN.NAV_BAR
-                0: THEME_BLOGTHEME.ADMIN.NO_NAV_BAR
+                0: THEME_BLOGTHEME.ADMIN.NAV_BAR
+                1: THEME_BLOGTHEME.ADMIN.NO_NAV_BAR
               validate:
                 type: bool
+            header.show_headline:
+              type: toggle
+              label: Show Headline
+              help: If the function is enabled, It Shows the Headline
+              highlight: 1
+              default: 1
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool                  
