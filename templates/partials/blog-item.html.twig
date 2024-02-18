@@ -1,5 +1,5 @@
 <div class="content-item h-entry">
-
+ <div class="small text-muted">{% include 'partials/blog/date.html.twig' %} {% if page.header.author %}// {{ page.header.author|e }}{% endif %}</div>
 {% if not hero_image_name %}
     <div class="content-title text-center">
         {% include 'partials/blog/title.html.twig' with {title_level: 'h2'} %}
