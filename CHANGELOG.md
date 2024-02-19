@@ -4,7 +4,7 @@
 1. [](#new)
    * Add Pagination
 
-2. [](#Bugfixes)
+2. [Bugfixes](#Bugfixes)
    * Bootstrap JS don't work
    * Remove douple Headline in Blog Item
 
