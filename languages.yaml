@@ -9,6 +9,9 @@ en:
         CONTINUE_READING: Continue reading...
         NEXT_POST: Next Post
         PREV_POST: Previous Post
+      LIST:
+        NEXT_SITE: Next
+        PREV_SITE: Previous
     SIDEBAR:
       SIMPLE_SEARCH:
         HEADLINE: Search
@@ -33,6 +36,9 @@ de:
         CONTINUE_READING: Weiterlesen...
         NEXT_POST: Nächster Beitrag
         PREV_POST: Vorheriger Beitrag
+      LIST:
+        NEXT_SITE: Weiter
+        PREV_SITE: Zurück        
     SIDEBAR:
       SIMPLE_SEARCH:
         HEADLINE: SimpleSearch
