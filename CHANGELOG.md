@@ -1,7 +1,7 @@
 # v0.0.2
 ## 2024/02/18
 
-1. [](#new)
+1. [new](#new)
    * Add Pagination
 
 2. [Bugfixes](#Bugfixes)
@@ -11,5 +11,5 @@
 # v0.0.1
 ## 2024/02/18
 
-1. [](#new)
+1. [](#new)new
    * First Release
