@@ -7,6 +7,7 @@
   <ul class="pagination justify-content-center">
     {% if pagination.hasPrev %}
     <li class="page-item">
+        {% set url = (base_url ~ pagination.params ~ pagination.previousUrl)|replace({'//':'/'}) %}
       <a class="page-link" href="{{ url }}">{{ 'THEME_BLOGTHEME.BLOG.LIST.PREV_SITE'|t }}</a>
     </li>
     {% else %}    
