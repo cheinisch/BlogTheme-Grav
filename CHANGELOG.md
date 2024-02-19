@@ -1,10 +1,10 @@
 # v0.0.2
 ## 2024/02/18
 
-1. [new](#new)
+1. [](#new)new
    * Add Pagination
 
-2. [Bugfixes](#Bugfixes)
+2. [](#Bugfixes)Bugfixes
    * Bootstrap JS don't work
    * Remove douple Headline in Blog Item
 
