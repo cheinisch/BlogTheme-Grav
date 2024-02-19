@@ -6,7 +6,7 @@
                                 <img class="card-img-top" src="{{ image.url|e }}" alt="{{ item.alt|e }}" title="{{ item.title|e }}" />                                                              
                             </div>
                             {% endif %}
-                            {% include 'partials/blog/title.html.twig' with {title_level: 'h2'} %}
+                            <h2><a class="" href="{{ page.url }}">{{ page.title }}</a></h2>
                             <div class="small text-muted">{% include 'partials/blog/date.html.twig' %} {% if page.header.author %}// {{ page.header.author|e }}{% endif %}</div>
                             {% if page.summary != page.content %}
                                 {{ page.summary|raw }}
