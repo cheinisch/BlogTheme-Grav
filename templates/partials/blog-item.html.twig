@@ -2,11 +2,9 @@
  <div class="small text-muted">{% include 'partials/blog/date.html.twig' %} {% if page.header.author %}// {{ page.header.author|e }}{% endif %}</div>
 {% if not hero_image_name %}
     <div class="content-title text-center">
-        {% include 'partials/blog/title.html.twig' with {title_level: 'h2'} %}
         {% if page.header.subtitle %}
         <h3 >{{ page.header.subtitle }}</h3>
         {% endif %}
-        {% include 'partials/blog/date.html.twig' %}
         {% include 'partials/blog/taxonomy.html.twig' %}
     </div>
 {% endif %}
