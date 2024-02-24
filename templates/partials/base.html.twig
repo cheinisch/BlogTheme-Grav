@@ -7,96 +7,95 @@
 {% use 'blocks/base.html.twig' %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}" data-bs-theme="{{ dark_mode }}">
-<head>
+    <head>
     {% block head deferred %}
-	<!-- Metainformationen -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="John Doe">
+        <!-- Metainformationen -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="John Doe">
 
-	<meta name="description" content="Free Web tutorials">
-	<meta name="keywords" content="HTML, CSS, JavaScript">
-	<!-- Titel-->
-	<title>{% if page.title %}{{ page.title|e('html') }} // {% endif %}{{ site.title|e('html') }}</title>
-    {% endblock head %}
-	<!-- Stylesheets -->
-    {% block stylesheets %}
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <!-- Titel-->
+        <title>{% if page.title %}{{ page.title|e('html') }} // {% endif %}{{ site.title|e('html') }}</title>
+        {% endblock head %}
+        <!-- Stylesheets -->
+        {% block stylesheets %}
         {% do assets.addCss('theme://css/bootstrap.min.css') %}
         {% do assets.addCss('theme://css/bootstrap-icons.min.css') %}
         {% do assets.addCss('theme://css/style.css') %}
-    {% endblock %}
-	<!-- Javascripte -->
-{% block javascripts %}
-    {% do assets.addJs('jquery', 101) %}
-    {% do assets.addJs('theme://js/bootstrap.min.js', {group:'bottom'}) %}
-{% endblock %}
+        {% endblock %}
+        <!-- Javascripte -->
+        {% block javascripts %}
+        {% do assets.addJs('jquery', 101) %}
+        {% do assets.addJs('theme://js/bootstrap.min.js', {group:'bottom'}) %}
+        {% endblock %}
 
-{% block assets deferred %}
-    {{ assets.css()|raw }}
-    {{ assets.js()|raw }}
-{% endblock %}
-</head>
-<body>
-    <!-- Bootstrap Static Header -->
-    
+        {% block assets deferred %}
+        {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Bootstrap Static Header -->
         {% if image %}
         <div style="background: url({{ image.url|e }})" class="jumbotron bg-cover text-white">
         {% else %}
         <div class="jumbotron bg-cover">
         {% endif %}
         <div class="container">
-            {% if image %}
-                <nav class="navbar navbar-expand-md navbar-dark mb-4">
-            {% else %}
-            <nav class="navbar navbar-expand-md mb-4">
-            {% endif %}
-                <div class="container-md col-lg-10 nav-size">
-                {% if page.header.show_big_title %}{% else %}<a class="navbar-brand" href="{{ home_url }}">{{ site.title|e('html') }}</a>{% endif %}
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        {% block header_navigation %}
-                            {% include 'partials/navigation.html.twig' %}
-                        {% endblock %}
-                    </div>
-                </div>
-            </nav>
+        {% if image %}
+        <nav class="navbar navbar-expand-md navbar-dark mb-4">
+        {% else %}
+        <nav class="navbar navbar-expand-md mb-4">
+        {% endif %}
+        <div class="container-md col-lg-10 nav-size">
+        {% if page.header.show_big_title %}{% else %}<a class="navbar-brand" href="{{ home_url }}">{{ site.title|e('html') }}</a>{% endif %}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        {% block header_navigation %}
+        {% include 'partials/navigation.html.twig' %}
+        {% endblock %}
         </div>
-        <div class="container py-5 headimg text-center">
-            {% if page.header.show_big_title %}
+        </div>
+        </nav>
+        </div>
+            <div class="container py-5 headimg text-center">
+                {% if page.header.show_big_title %}
                 <h1 class="display-4 font-weight-bold">{{ site.title|e('html') }}</h1>
                 {% if theme_var('subtitle.enabled') %}
-                    <p class="font-italic mb-0">{{ subtitle }}</p>
+                <p class="font-italic mb-0">{{ subtitle }}</p>
                 {% endif %} 
-            {% else %}     
+                {% else %}     
                 <h1 class="display-4 font-weight-bold">{{ page.title|e('html') }}</h1>
-            {% endif %}      
-        </div>
-    </div>
-    <div class="container-md">
-    <div class="row justify-content-center">
-        <div class="col-lg-10 pt-2 pb-1">
-            <div class="row">
-        <section id="start">
-        {% block body %}
-                    {% block messages %}
-                        {% include 'partials/messages.html.twig' ignore missing %}
-                    {% endblock %}
-                    {{ block('content_surround') }}
-                    hallo welt
-        {% endblock %}
-        </section>
+                {% endif %}      
             </div>
-    </div>
-
-    {% block footer %}
+        </div>
+        <div class="container-md">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 pt-2 pb-1">
+                    <div class="row">
+                        <section id="start">
+                            {% block body %}
+                            {% block messages %}
+                            {% include 'partials/messages.html.twig' ignore missing %}
+                            {% endblock %}
+                            {{ block('content_surround') }}
+                            {% endblock %}
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block footer %}
         {% include 'partials/footer.html.twig' %}
-    {% endblock %}
+        {% endblock %}
 
-{% block bottom %}
-    {{ assets.js('bottom')|raw }}
-{% endblock %}
+        {% block bottom %}
+        {{ assets.js('bottom')|raw }}
+        {% endblock %}
 
-</body>
+    </body>
 </html>
