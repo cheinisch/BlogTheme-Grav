@@ -27,6 +27,15 @@ body {
     min-height: 100vh;
 }
 
+li.sidebar
+{
+    list-style: none;
+}
+
+ul.archives{
+    padding-left: 0px;
+}
+
 @media screen and (min-width: 1024px){
     .headimg{
         min-height: 350px;
