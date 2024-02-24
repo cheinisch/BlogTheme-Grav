@@ -15,6 +15,14 @@
 }
 
 /*
+ * Fix for Large images
+ */
+
+ img{
+    max-width: 100%;
+ }
+
+/*
 *
 * ==========================================
 * FOR DEMO PURPOSES
