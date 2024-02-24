@@ -1,7 +1,7 @@
-        <div class="container">
-            <div class="col-lg-10 nav-size">
+<div class="container">
+    <div class="col-lg-10 nav-size">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-body-secondary">&copy 2024 Christian Heinisch <br />Made with <a href="https://getgrav.org/">GRAV</a> and <i class="bi-heart"></i></p>
+        <p class="col-md-4 mb-0 text-body-secondary">&copy 2024 Christian Heinisch <br />Made with <a href="https://getgrav.org/">GRAV</a> and <i class="bi-heart"></i></p>
             {% if theme_var('socialicons.enable') %}
             <ul class="nav col-md4 justify-content-center">
                 {% if theme_var('socialicons.github') %}<li class="nav-item"><a href="https://github.com/{{ theme_var('socialicons.github') }}" class="nav-link px-2 text-body-secondary"><i class="bi-github"></i></a></li>{% endif %}
@@ -13,10 +13,10 @@
             </ul>
             {% endif %}
             <ul class="nav col-md-4 justify-content-end">
-            {% for placeholder_key, placeholder_value in footer_nav %}
-                <li class="nav-item"><a href="{{ placeholder_value }}" class="nav-link px-2 text-body-secondary">{{ placeholder_key }}</a></li>
-            {% endfor %}
+                {% for placeholder_key, placeholder_value in footer_nav %}
+                    <li class="nav-item"><a href="{{ placeholder_value }}" class="nav-link px-2 text-body-secondary">{{ placeholder_key }}</a></li>
+                {% endfor %}
             </ul>
         </footer>
     </div>
-        </div>
+</div>
