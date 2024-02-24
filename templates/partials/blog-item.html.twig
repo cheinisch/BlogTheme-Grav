@@ -5,13 +5,13 @@
         {% if page.header.subtitle %}
         <h3 >{{ page.header.subtitle }}</h3>
         {% endif %}
-        {% include 'partials/blog/taxonomy.html.twig' %}
+        
     </div>
 {% endif %}
     <div class="e-content">
         {{ page.content|raw }}
     </div>
-
+    {% include 'partials/blog/taxonomy.html.twig' %}
     {% if page.header.continue_link is same as(true) and config.plugins.comments.enabled %}
         {% include 'partials/comments.html.twig' %}
     {% endif %}

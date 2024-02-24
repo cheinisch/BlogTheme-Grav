@@ -22,13 +22,6 @@
     max-width: 100%;
  }
 
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSES
-* ==========================================
-*
-*/
 
 body {
     min-height: 100vh;
@@ -52,3 +45,8 @@ body {
 .card-img-top{
     height: 300px;
 }
+
+a.tags {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
