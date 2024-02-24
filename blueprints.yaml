@@ -1,15 +1,15 @@
 name: BlogTheme
 slug: blogtheme
 type: theme
-version: 0.0.2
-description: "BlogTheme is a light bootsrap based theme"
+version: 0.0.3
+description: "BlogTheme is a light bootstrap based theme"
 icon: empire
 author:
   name: Heimfisch
-  email: devs@getgrav.org
+  email: christian@heinisch-design.de
   url: https://heinisch-design.de
 homepage: https://github.com/cheinisch/BlogTheme-Grav
-demo: https://demo.getgrav.org/blog-skeleton
+demo: https://blogtheme.demo.heinisch-design.de
 keywords: bootstrap, theme, core, modern, responsive, html5, css3
 bugs: https://github.com/cheinisch/BlogTheme-Grav/issues
 license: MIT
