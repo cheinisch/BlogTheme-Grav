@@ -114,3 +114,18 @@ form:
       placeholder_key: Pagetitle
       placeholder_value: Pageurl
       required: false
+    datatracking.enabled:
+        type: toggle
+        label: Enable Trackingcode
+        help: Add some Trackingcode into the Footerarea of your Website
+        highlight: 0
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+    datatracking.code:
+        label: Trackingcode
+        help: Add some Trackingcode into the Footerarea of your Website
+        type: textarea              
