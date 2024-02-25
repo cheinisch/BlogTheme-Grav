@@ -29,7 +29,7 @@
 ## Usage
 - Clone the repository to your local machine.
 - upload the content into the following path
-- - /user/themes/blogtheme
+> /user/themes/blogtheme
 - Integrate tracking codes and social media links in the theme settings
 
 ## Contributing
