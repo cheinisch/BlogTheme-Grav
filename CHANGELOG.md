@@ -1,3 +1,10 @@
+# v0.1.0
+## unkonwn
+
+1. [](#new)new
+   * Add Daylight/Nightlight detection for darkmode (8pm - 8am)
+   * Add color for mobile Browsers
+
 # v0.0.4
 ## 2024/02/25
 
