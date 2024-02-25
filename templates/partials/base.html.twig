@@ -95,7 +95,7 @@
 
         <!-- Start Additional Tracking Code -->
         {% if theme_var('datatracking.enabled') %}
-        {{ theme_var('datatracking.code') }}
+        {{ theme_var('datatracking.code')|raw }}
         {% endif %}
         <!-- End Additional Tracking Code -->
         {% block bottom %}
