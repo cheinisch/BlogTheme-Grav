@@ -1,6 +1,4 @@
-This is a Template for the CMS GRAV
-
-# Template Readme
+# Blog Theme Template
 
 ## Features
 
@@ -45,7 +43,3 @@ This is a Template for the CMS GRAV
 
 ## Contact
 - For any inquiries or support, please contact [email@example.com](mailto:email@example.com).
-
----
-
-**Note:** Replace placeholders such as `[MIT License](link-to-license)` and `email@example.com` with actual links and contact information.
