@@ -51,6 +51,7 @@ form:
         light: Light
         dark: Dark
         auto: Auto
+        time: Daylight detection
       validate:
         type: text
     color.select:
