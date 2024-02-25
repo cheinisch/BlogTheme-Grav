@@ -53,6 +53,20 @@ form:
         auto: Auto
       validate:
         type: text
+    color.select:
+      type: toggle
+      label:  Accentcolor
+      help: Add an accentcolor to some text items
+      highlight: default
+      default: default
+      options:
+        default: Default
+        blue: Blue
+        orange: Orange
+        red: Red
+        green: Green
+      validate:
+        type: text        
     subtitle.enabled:
         type: toggle
         label: Subtitle under Site Title
