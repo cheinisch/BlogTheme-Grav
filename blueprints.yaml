@@ -50,6 +50,7 @@ form:
       options:
         light: Light
         dark: Dark
+        time: Daylight detection
       validate:
         type: text
     color.select:
