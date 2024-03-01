@@ -4,6 +4,9 @@
 <div class="sidebar-content">
     {% include 'partials/simplesearch_searchbox.html.twig' %}
 </div>
+
+{{ page.find('/modules/sidebar').content|raw }}
+
 {% endif %}
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
 <div class="sidebar-content">
@@ -17,9 +20,6 @@
     <a class="btn btn-primary" href="{{ base_url }}/random"><i class="bi bi-arrow-clockwise"></i> {{ 'THEME_BLOGTHEME.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</a>
 </div>
 {% endif %}
-
-{{ page.find('/modules/sidebar').content|raw }}
-
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">
     <h4>{{ 'THEME_BLOGTHEME.SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>

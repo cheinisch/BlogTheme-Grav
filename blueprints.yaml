@@ -30,17 +30,104 @@ form:
           0: Disabled
         validate:
           type: bool
-    show_sidebar:
-      type: toggle
-      label: Sidebar
-      help: When enabled, the sidebar is active
-      highlight: 0
-      default: 0
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
+    sidebar.fieldset:
+      type: fieldset
+      title: Sidebar
+      help: Help text
+      info: Show the Sidebar and the Widgets
+      text: Show the Sidebar and the Widgets
+      icon: comments       # Fork Awesome icons system (see : forkaweso.me).
+      collapsed: true      # Initial state of fieldset (see collapsible option)
+      collapsible: true    # Whether one can expand the fieldset or not
+      fields:
+        sidebar.enable:
+          type: toggle
+          label: Sidebar
+          help: When enabled, the sidebar is active
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        sidebar.search:
+          type: toggle
+          label: Search
+          help: Shows a Widget with Text
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool            
+        sidebar.textfield:
+          type: toggle
+          label: Text Modul
+          help: Shows a Widget with Text
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        sidebar.relatedposts:
+          type: toggle
+          label: Related Posts
+          help: Shows a Widget with Text
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        sidebar.goodluck:
+          type: toggle
+          label: Random Text
+          help: Shows a Widget with Text
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool  
+        sidebar.tags:
+          type: toggle
+          label: Tags
+          help: Shows a Widget with Text
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        sidebar.archive:
+          type: toggle
+          label: Archive
+          help: Shows a Widget with Text
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        sidebar.rss:
+          type: toggle
+          label: RSS Feed
+          help: Shows a Widget wRSS Feed
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool           
     darkmode:
       type: toggle
       label: Dark Style
