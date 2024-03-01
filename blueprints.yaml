@@ -45,12 +45,11 @@ form:
       type: toggle
       label: Dark Style
       help: Activate dark mode style
-      highlight: auto
-      default: auto
+      highlight: light
+      default: light
       options:
         light: Light
         dark: Dark
-        auto: Auto
       validate:
         type: text
     color.select:
