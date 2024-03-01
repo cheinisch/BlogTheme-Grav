@@ -28,9 +28,8 @@
 
 ## Usage
 - Clone the repository to your local machine.
-- Customize accent colors, content, and branding according to your needs.
-- Integrate tracking codes and social media links as desired.
-- Deploy the template to your hosting environment.
+- upload the content into the following path `/user/themes/blogtheme`
+- Integrate tracking codes and social media links in the theme settings
 
 ## Contributing
 - Contributions are welcome! Feel free to fork the repository, make your changes, and submit a pull request.

@@ -50,6 +50,7 @@ form:
       options:
         light: Light
         dark: Dark
+        auto: Auto
       validate:
         type: text
     color.select:
