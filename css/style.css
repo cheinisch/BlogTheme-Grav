@@ -14,6 +14,8 @@
   border: none !important;
 }
 
+
+
 /*
  * Fix for Large images
  */
@@ -40,7 +42,7 @@ ul.archives{
     padding-left: 0px;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
     .headimg{
         min-height: 350px;
     }
