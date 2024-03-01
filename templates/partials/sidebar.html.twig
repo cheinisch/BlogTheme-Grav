@@ -1,6 +1,5 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
-
 {% if config.plugins.simplesearch.enabled %}
 <div class="sidebar-content">
     {% include 'partials/simplesearch_searchbox.html.twig' %}
@@ -14,8 +13,8 @@
 {% endif %}
 {% if config.plugins.random.enabled %}
 <div class="sidebar-content">
-	<h4>{{ 'THEME_BLOGTHEME.SIDEBAR.RANDOM_ARTICLE.HEADLINE'|t }}</h4>
-	<a class="btn btn-primary" href="{{ base_url }}/random"><i class="bi bi-arrow-clockwise"></i> {{ 'THEME_BLOGTHEME.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</a>
+    <h4>{{ 'THEME_BLOGTHEME.SIDEBAR.RANDOM_ARTICLE.HEADLINE'|t }}</h4>
+    <a class="btn btn-primary" href="{{ base_url }}/random"><i class="bi bi-arrow-clockwise"></i> {{ 'THEME_BLOGTHEME.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</a>
 </div>
 {% endif %}
 
@@ -30,7 +29,7 @@
 {% if config.plugins.archives.enabled %}
 <div class="sidebar-content">
     <h4>{{ 'THEME_BLOGTHEME.SIDEBAR.ARCHIVES.HEADLINE'|t }}</h4>
-	{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
+    {% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
 </div>
 {% endif %}
 {% if config.plugins.feed.enabled %}

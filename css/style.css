@@ -18,6 +18,10 @@
  * Fix for Large images
  */
 
+ .sidebar-padding-left{
+    padding-left: 10px;
+ }
+
  img{
     max-width: 100%;
  }
