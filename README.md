@@ -4,7 +4,7 @@
 
 ![GitHub Release](https://img.shields.io/github/v/release/cheinisch/BlogTheme-GRAV?style=for-the-badge&include_prereleases&display_name=release&logo=github&color=purple) ![GitHub License](https://img.shields.io/github/license/cheinisch/BlogTheme-GRAV?style=for-the-badge)
 
-![Static Badge](https://img.shields.io/badge/Version_5.3.2-bootstrap?link=https%3A%2F%2Fgetbootstrap.com&style=for-the-badge&logo=bootstrap&logoColor=white&label=Bootstrap&color=blue) 
+![Static Badge](https://img.shields.io/badge/Version_5.3.2-bootstrap?link=https%3A%2F%2Fgetbootstrap.com&style=for-the-badge&logo=bootstrap&logoColor=white&&color=blue) 
 
 
 # Blog Theme Template
